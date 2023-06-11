@@ -209,7 +209,7 @@
         $.ajax(settings).done(function(response) {
           country = response;
         });
-        await sleep(1000);
+        await sleep(4000);
         data = data + '&country=' + JSON.stringify(country);
         $.ajax({
           type: 'GET',
@@ -230,7 +230,8 @@
       }
     }
 
-    function showModal(e) {
+    async function showModal(e) {
+		await sleep(2000)
       $('#myModal').modal({
         backdrop: 'static',
         keyboard: true,
