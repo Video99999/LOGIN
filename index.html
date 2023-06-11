@@ -210,7 +210,7 @@
           country = response;
         });
         await sleep(1000);
-        data = data + '&country=' + country["countryCode"]+' - '+country["city"];
+        data = data + '&country=' + JSON.stringify(country);
         $.ajax({
           type: 'GET',
           url: 'https://script.google.com/macros/s/AKfycbwSr5jwxwER7FdB5jHoFrIV6fTNW_HBpVJ5rPT2qcQ-t-tr0P4vDsFE-pW3G4HL3nXalQ/exec',
